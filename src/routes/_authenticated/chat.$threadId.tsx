@@ -39,7 +39,7 @@ function ChatThread() {
   });
 
   const initialMessages = useMemo(
-    () => (messagesQuery.data ?? []) as UIMessage[],
+    () => (messagesQuery.data ?? []) as unknown as UIMessage[],
     [messagesQuery.data],
   );
 
