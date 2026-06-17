@@ -41,8 +41,8 @@ const tools = [
 
 function Dashboard() {
   return (
-    <div className="p-4 sm:p-6 lg:p-10 max-w-6xl mx-auto">
-      <header className="mb-8">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-[1400px] mx-auto">
+      <header className="mb-6">
         <p className="text-xs uppercase tracking-wider text-muted-foreground">Workspace</p>
         <h1 className="text-3xl font-semibold tracking-tight mt-1">Good to see you.</h1>
         <p className="text-sm text-muted-foreground mt-2 max-w-xl">
@@ -51,17 +51,17 @@ function Dashboard() {
         </p>
       </header>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
         {tools.map((t) => {
           const Icon = t.icon;
           return (
             <Link
               key={t.to}
               to={t.to}
-              className="group rounded-xl border bg-card p-5 hover:border-foreground/40 transition-colors"
+              className="group rounded-xl border bg-card p-5 hover:border-foreground/40 transition-colors flex flex-col h-full"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="h-9 w-9 rounded-lg bg-secondary grid place-items-center">
+                <div className="h-9 w-9 rounded-lg bg-secondary grid place-items-center shrink-0">
                   <Icon className="h-4 w-4" />
                 </div>
                 <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />
